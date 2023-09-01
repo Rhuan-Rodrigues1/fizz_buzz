@@ -6,6 +6,10 @@ defmodule FizzBuzz do
     |> handle_verify_file()
   end
 
-  def handle_verify_file({:ok, result}), do: result
-  def handle_verify_file({:error, reason}), do: reason
+  def handle_verify_file({:ok, result}) do
+    result
+    |> String.split(",")
+    |> Enum.map(fn items -> String.to_integer(items) end)
+  end
+  def handle_verify_file({:error, reason}), do: "Error read file: #{reason}"
 end
