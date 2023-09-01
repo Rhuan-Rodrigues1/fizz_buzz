@@ -9,6 +9,19 @@ Projeto para fixar aprendizado na sintaxe do Elixir.
 - Controle de fluxo com pattern matching
 - Paradigma funcional
 
+Para rodar o programa use:
+
+```elixir
+  iex -S mix
+  FizzBuzz.build_file("numbers.txt")
+```
+
+Para rodar o programa teste use:
+
+```elixir
+  mix test
+```
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
@@ -25,4 +38,5 @@ end
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/fizz_buzz](https://hexdocs.pm/fizz_buzz).
+
 # fizz_buzz
