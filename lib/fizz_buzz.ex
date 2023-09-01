@@ -7,12 +7,14 @@ defmodule FizzBuzz do
   end
 
   defp handle_verify_file({:ok, result}) do
-    result = result
-    |> String.split(",")
-    |> Enum.map(&convert_and_evaluate_numbers/1)
+    result =
+      result
+      |> String.split(",")
+      |> Enum.map(&convert_and_evaluate_numbers/1)
 
     {:ok, result}
   end
+
   defp handle_verify_file({:error, reason}), do: {:error, "Error read file: #{reason}"}
 
   defp convert_and_evaluate_numbers(elem) do
